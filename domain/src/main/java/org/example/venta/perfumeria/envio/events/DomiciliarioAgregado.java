@@ -14,11 +14,11 @@ public class DomiciliarioAgregado extends DomainEvent {
         this.nombre = nombre;
     }
 
-    public Nombre getNombre() {
+    public Nombre nombre() {
         return nombre;
     }
 
-    public DomiciliarioId getDomiciliarioId() {
+    public DomiciliarioId domiciliarioId() {
         return domiciliarioId;
     }
 }

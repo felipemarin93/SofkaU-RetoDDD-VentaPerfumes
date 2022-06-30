@@ -17,15 +17,15 @@ public class FacturaAgregada extends DomainEvent {
         this.detalle = detalle;
     }
 
-    public Detalle getDetalle() {
+    public Detalle detalle() {
         return detalle;
     }
 
-    public FacturaId getFacturaId() {
+    public FacturaId facturaId() {
         return facturaId;
     }
 
-    public Precio getPrecio() {
+    public Precio precio() {
         return precio;
     }
 }

@@ -5,6 +5,8 @@ import org.example.venta.perfumeria.pedido.values.Cantidad;
 import org.example.venta.perfumeria.pedido.values.Nombre;
 import org.example.venta.perfumeria.pedido.values.ProductoId;
 
+import java.util.Objects;
+
 public class Producto extends Entity<ProductoId> {
     protected Nombre nombre;
     protected Cantidad cantidad;
@@ -16,12 +18,9 @@ public class Producto extends Entity<ProductoId> {
         this.cantidad = cantidad;
     }
 
-
-    public Cantidad getCantidad() {
-        return cantidad;
+    public void  cambiarCantidad(Cantidad cantidadAmodificar){
+        this.cantidad = cantidad.cambiarCantidad(Objects.requireNonNull(cantidadAmodificar).value());
     }
 
-    public Nombre getNombre() {
-        return nombre;
-    }
+
 }

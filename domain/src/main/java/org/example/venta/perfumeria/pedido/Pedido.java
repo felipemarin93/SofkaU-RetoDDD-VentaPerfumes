@@ -14,8 +14,6 @@ import org.example.venta.perfumeria.perfumeria.PerfumeriaId;
 public class Pedido extends AggregateEvent<PedidoId> {
     protected PerfumeriaId perfumeriaId;
     protected Cliente cliente;
-//    protected Set<Producto> productos;
-
     protected Producto producto;
     protected Factura factura;
     protected Descripcion descripcion;
@@ -26,6 +24,8 @@ public class Pedido extends AggregateEvent<PedidoId> {
         subscribe(new PedidoEventChange(this));
     }
 
+
+
     public void cambiarCliente(Cliente cliente){
         appendChange(new ClienteCambiado(cliente)).apply();
     }
@@ -33,9 +33,11 @@ public class Pedido extends AggregateEvent<PedidoId> {
     public void agregarProducto(ProductoId productoId, Nombre nombre, Cantidad cantidad){
         appendChange(new ProductoAgregado(productoId,nombre,cantidad)).apply();
     }
-
     public void agregarFactura(FacturaId facturaId, Precio precio, Detalle detalle){
         appendChange(new FacturaAgregada(facturaId,precio,detalle)).apply();
+    }
+    public void cambiarCantidadProducto(ProductoId productoId, Cantidad cantidad){
+        appendChange(new CantidadProductoCambiada(productoId,cantidad)).apply();
     }
 
 }

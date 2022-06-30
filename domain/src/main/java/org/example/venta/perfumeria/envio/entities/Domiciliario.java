@@ -4,6 +4,8 @@ import co.com.sofka.domain.generic.Entity;
 import org.example.venta.perfumeria.envio.values.DomiciliarioId;
 import org.example.venta.perfumeria.envio.values.Nombre;
 
+import java.util.Objects;
+
 public class Domiciliario extends Entity<DomiciliarioId> {
     protected Nombre nombre;
 
@@ -12,7 +14,11 @@ public class Domiciliario extends Entity<DomiciliarioId> {
         this.nombre = nombre;
     }
 
-    public Nombre getNombre() {
+    public Nombre Nombre() {
         return nombre;
+    }
+
+    public void cambiarNombre(String nombreAModificar) {
+        this.nombre = nombre.cambiarNombre(Objects.requireNonNull(nombreAModificar));
     }
 }

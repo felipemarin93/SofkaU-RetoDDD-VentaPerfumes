@@ -8,25 +8,23 @@ import org.example.venta.perfumeria.pedido.values.PedidoId;
 public class EnvioCreado extends DomainEvent {
     private final PedidoId pedidoId;
     private final Fecha fecha;
-    private final Destinatario destinatario;
 
-    public EnvioCreado(PedidoId pedidoId, Fecha fecha, Destinatario destinatario) {
+
+    public EnvioCreado(PedidoId pedidoId, Fecha fecha) {
         super("org.example.venta.perfumeria.EnvioCreado");
 
         this.pedidoId = pedidoId;
         this.fecha = fecha;
-        this.destinatario = destinatario;
+
     }
 
-    public Fecha getFecha() {
+    public Fecha fecha() {
         return fecha;
     }
 
-    public PedidoId getPedidoId() {
+    public PedidoId pedidoId() {
         return pedidoId;
     }
 
-    public Destinatario getDestinatario() {
-        return destinatario;
-    }
+
 }

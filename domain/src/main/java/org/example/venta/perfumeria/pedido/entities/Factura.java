@@ -15,4 +15,5 @@ public class Factura extends Entity<FacturaId> {
         this.precio = precio;
         this.detalle = detalle;
     }
+
 }

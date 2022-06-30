@@ -13,7 +13,7 @@ public class ClienteCambiado extends DomainEvent {
 
     }
 
-    public Cliente getCliente() {
+    public Cliente cliente() {
         return cliente;
     }
 }

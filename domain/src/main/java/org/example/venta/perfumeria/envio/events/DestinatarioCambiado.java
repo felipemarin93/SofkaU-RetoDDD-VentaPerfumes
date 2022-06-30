@@ -17,15 +17,15 @@ public class DestinatarioCambiado extends DomainEvent {
         this.celular = celular;
     }
 
-    public Celular getCelular() {
+    public Celular celular() {
         return celular;
     }
 
-    public Direccion getDireccion() {
+    public Direccion direccion() {
         return direccion;
     }
 
-    public Nombre getNombre() {
+    public Nombre nombre() {
         return nombre;
     }
 }

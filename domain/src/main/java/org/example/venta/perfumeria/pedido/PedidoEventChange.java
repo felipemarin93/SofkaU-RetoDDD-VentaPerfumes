@@ -8,31 +8,34 @@ import org.example.venta.perfumeria.pedido.events.FacturaAgregada;
 import org.example.venta.perfumeria.pedido.events.PedidoCreado;
 import org.example.venta.perfumeria.pedido.events.ProductoAgregado;
 
+
 public class PedidoEventChange extends EventChange {
     public PedidoEventChange(Pedido pedido) {
 
         apply((PedidoCreado event)->{
-            pedido.cliente = event.getCliente();
+            pedido.cliente = event.cliente();
             pedido.factura = null;
-            pedido.perfumeriaId = event.getPerfumeriaId();
+            pedido.perfumeriaId = event.perfumeriaId();
             pedido.descripcion = null;
             pedido.producto = null;
-                //new HashSet<>();//TODO Pendiente preguntar como crear el Set cuando nace de la entidad a coach Raul
+
 
         });
 
         apply((ClienteCambiado event)->{
-            pedido.cliente = event.getCliente();
+            pedido.cliente = event.cliente();
         });
 
         apply((ProductoAgregado event)->{
-            pedido.producto = new Producto(event.getProductoId(), event.getNombre(), event.getCantidad());
+            pedido.producto = new Producto(event.productoId(), event.nombre(), event.cantidad());
         });
 
         apply((FacturaAgregada event)->{
-            pedido.factura = new Factura(event.getFacturaId(),event.getPrecio(), event.getDetalle());
+            pedido.factura = new Factura(event.facturaId(),event.precio(), event.detalle());
         });
-
+        apply((CantidadProductoCambiada event)->{
+            pedido.producto.cambiarCantidad(event.cantidad());
+        });
 
     }
 }

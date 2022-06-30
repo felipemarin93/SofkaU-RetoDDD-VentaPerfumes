@@ -14,11 +14,11 @@ public class PedidoCreado extends DomainEvent {
         this.cliente = cliente;
     }
 
-    public Cliente getCliente() {
+    public Cliente cliente() {
         return cliente;
     }
 
-    public PerfumeriaId getPerfumeriaId() {
+    public PerfumeriaId perfumeriaId() {
         return perfumeriaId;
     }
 }

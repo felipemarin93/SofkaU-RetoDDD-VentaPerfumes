@@ -2,9 +2,16 @@ package org.example.venta.perfumeria.pedido.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
-public class Telefono implements ValueObject<Long> {
+import java.util.Objects;
+
+public class Telefono implements ValueObject<String> {
+    private final String telefono;
+    public Telefono(String telefono) {
+
+        this.telefono = Objects.requireNonNull(telefono);
+    }
     @Override
-    public Long value() {
-        return null;
+    public String value() {
+        return telefono;
     }
 }

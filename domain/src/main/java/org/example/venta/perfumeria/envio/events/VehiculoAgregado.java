@@ -17,15 +17,17 @@ public class VehiculoAgregado extends DomainEvent {
         this.marca = marca;
     }
 
-    public Tipo getTipo() {
+    public Tipo tipo() {
+
         return tipo;
     }
 
-    public Marca getMarca() {
+    public Marca marca() {
+
         return marca;
     }
 
-    public VehiculoId getVehiculoId() {
+    public VehiculoId vehiculoId() {
         return vehiculoId;
     }
 }

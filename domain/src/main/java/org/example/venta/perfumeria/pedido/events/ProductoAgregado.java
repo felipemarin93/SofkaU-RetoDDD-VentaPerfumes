@@ -17,15 +17,15 @@ public class ProductoAgregado extends DomainEvent {
         this.cantidad = cantidad;
     }
 
-    public Nombre getNombre() {
+    public Nombre nombre() {
         return nombre;
     }
 
-    public ProductoId getProductoId() {
+    public ProductoId productoId() {
         return productoId;
     }
 
-    public Cantidad getCantidad() {
+    public Cantidad cantidad() {
         return cantidad;
     }
 

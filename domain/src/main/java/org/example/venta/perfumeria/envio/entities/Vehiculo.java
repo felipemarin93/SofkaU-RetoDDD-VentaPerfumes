@@ -5,6 +5,8 @@ import org.example.venta.perfumeria.envio.values.Marca;
 import org.example.venta.perfumeria.envio.values.Tipo;
 import org.example.venta.perfumeria.envio.values.VehiculoId;
 
+import java.util.Objects;
+
 public class Vehiculo extends Entity<VehiculoId> {
     protected Tipo tipo;
     protected Marca marca;
@@ -15,11 +17,15 @@ public class Vehiculo extends Entity<VehiculoId> {
         this.marca = marca;
     }
 
-    public Marca getMarca() {
+    public Marca marca() {
         return marca;
     }
 
-    public Tipo getTipo() {
+    public Tipo tipo() {
         return tipo;
+    }
+
+    public void cambiarTipoVehiculo(Tipo tipo) {
+        this.tipo = Objects.requireNonNull(tipo);
     }
 }
