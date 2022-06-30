@@ -3,7 +3,7 @@ package org.example.venta.perfumeria.envio.events;
 import co.com.sofka.domain.generic.DomainEvent;
 import org.example.venta.perfumeria.envio.values.Fecha;
 import org.example.venta.perfumeria.envio.entities.Destinatario;
-import org.example.venta.perfumeria.pedido.PedidoId;
+import org.example.venta.perfumeria.pedido.values.PedidoId;
 
 public class EnvioCreado extends DomainEvent {
     private final PedidoId pedidoId;

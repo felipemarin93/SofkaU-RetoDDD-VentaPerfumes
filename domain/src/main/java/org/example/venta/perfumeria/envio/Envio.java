@@ -6,7 +6,7 @@ import org.example.venta.perfumeria.envio.entities.Domiciliario;
 import org.example.venta.perfumeria.envio.entities.Vehiculo;
 import org.example.venta.perfumeria.envio.events.*;
 import org.example.venta.perfumeria.envio.values.*;
-import org.example.venta.perfumeria.pedido.PedidoId;
+import org.example.venta.perfumeria.pedido.values.PedidoId;
 
 public class Envio extends AggregateEvent<EnvioId> {
     protected Domiciliario domiciliario;
