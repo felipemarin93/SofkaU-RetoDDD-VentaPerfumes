@@ -1,4 +1,9 @@
 package org.example.venta.perfumeria.pedido;
 
-public class Pedido {
+import co.com.sofka.domain.generic.AggregateEvent;
+
+public class Pedido extends AggregateEvent<PedidoId> {
+    public Pedido(PedidoId entityId) {
+        super(entityId);
+    }
 }
