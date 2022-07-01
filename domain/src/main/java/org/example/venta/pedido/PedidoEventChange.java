@@ -1,6 +1,7 @@
 package org.example.venta.pedido;
 
 import co.com.sofka.domain.generic.EventChange;
+import org.example.venta.pedido.entities.Cliente;
 import org.example.venta.pedido.entities.Factura;
 import org.example.venta.pedido.entities.Producto;
 import org.example.venta.pedido.events.CantidadProductoCambiada;
@@ -14,7 +15,7 @@ public class PedidoEventChange extends EventChange {
     public PedidoEventChange(Pedido pedido) {
 
         apply((PedidoCreado event)->{
-            pedido.cliente = event.cliente();
+            pedido.cliente = new Cliente(event.clienteId(),event.nombre(),event.telefono());
             pedido.factura = null;
             pedido.perfumeriaId = event.perfumeriaId();
             pedido.descripcion = null;

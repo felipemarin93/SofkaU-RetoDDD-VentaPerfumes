@@ -18,10 +18,16 @@ public class Pedido extends AggregateEvent<PedidoId> {
     protected Producto producto;
     protected Factura factura;
     protected Descripcion descripcion;
+    protected ClienteId clienteId;
+    protected Nombre nombre;
+    protected Telefono telefono;
 
-    public Pedido(PedidoId entityId, PerfumeriaId perfumeriaId, Cliente cliente) {
+    public Pedido(PedidoId entityId, PerfumeriaId perfumeriaId,ClienteId clienteId, Nombre nombre, Telefono telefono) {
         super(entityId);
-        appendChange(new PedidoCreado(perfumeriaId,cliente)).apply();
+        this.clienteId = clienteId;
+        this.nombre = nombre;
+        this.telefono = telefono;
+        appendChange(new PedidoCreado(perfumeriaId,clienteId, nombre, telefono)).apply();
         subscribe(new PedidoEventChange(this));
     }
     private Pedido(PedidoId pedidoId){

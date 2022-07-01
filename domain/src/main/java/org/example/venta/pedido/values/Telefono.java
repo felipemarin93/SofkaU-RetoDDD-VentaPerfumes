@@ -1,6 +1,7 @@
 package org.example.venta.pedido.values;
 
 import co.com.sofka.domain.generic.ValueObject;
+import org.example.venta.envio.values.Celular;
 
 import java.util.Objects;
 
@@ -21,5 +22,9 @@ public class Telefono implements ValueObject<String> {
     @Override
     public String value() {
         return telefono;
+    }
+
+    public Telefono cambiarTelefono(String telefonoAModificar){
+        return new Telefono(Objects.requireNonNull(telefonoAModificar));
     }
 }
