@@ -1,29 +1,27 @@
-package org.example.venta.perfumeria.perfumeria;
+package org.example.venta.perfumeria.perfumeria.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-
-import java.util.UUID;
+import org.example.venta.perfumeria.perfumeria.entities.Administrador;
+import org.example.venta.perfumeria.envio.events.values.Direccion;
 
 public class PerfumeriaCreada extends DomainEvent {
 
 
-    protected Administrador administrador;
+    private Administrador administrador;
     private Direccion direccion;
 
     public PerfumeriaCreada(Administrador Administrador, Direccion direccion) {
         super("co.com.sofkau.entrenamiento.heladeria.HeladeriaCreada");
-
 
         this.administrador = Administrador;
         this.direccion = direccion;
     }
 
 
-    public Direccion getDireccion() {
+    public Direccion direccion() {
         return direccion;
     }
-
-    public Administrador getAdministrador() {
+    public Administrador administrador() {
         return administrador;
     }
 }

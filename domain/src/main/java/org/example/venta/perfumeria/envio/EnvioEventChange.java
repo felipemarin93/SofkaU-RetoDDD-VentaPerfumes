@@ -33,14 +33,14 @@ public class EnvioEventChange extends EventChange {
             envio.destinatario = new Destinatario(event.destinatarioId(), event.nombre(), event.direccion(), event.celular());
         });
 
-        /**
-         * Evento cambiado y verificado
-         */
         apply((CelularDestinatarioCambiado event) -> {
             envio.destinatario.cambiarCelular( event.celular());
         });
         apply((DireccionCambiada event) -> {
             envio.destinatario.cambiarDireccion(event.direccion());
+        });
+        apply((NombreDomiciliarioCambiado event) -> {
+            envio.domiciliario.cambiarNombre(event.nombre().value());
         });
 
 

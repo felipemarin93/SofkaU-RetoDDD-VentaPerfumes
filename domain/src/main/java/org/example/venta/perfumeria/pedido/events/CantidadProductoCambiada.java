@@ -1,4 +1,4 @@
-package org.example.venta.perfumeria.pedido;
+package org.example.venta.perfumeria.pedido.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import org.example.venta.perfumeria.pedido.values.Cantidad;

@@ -7,6 +7,7 @@ import org.example.venta.perfumeria.pedido.events.ClienteCambiado;
 import org.example.venta.perfumeria.pedido.events.FacturaAgregada;
 import org.example.venta.perfumeria.pedido.events.PedidoCreado;
 import org.example.venta.perfumeria.pedido.events.ProductoAgregado;
+import org.example.venta.perfumeria.pedido.events.CantidadProductoCambiada;
 
 
 public class PedidoEventChange extends EventChange {
