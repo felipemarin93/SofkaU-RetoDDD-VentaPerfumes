@@ -68,7 +68,7 @@ public class Envio extends AggregateEvent<EnvioId> {
         appendChange(new VehiculoAgregado(vehiculoId, tipo, marca)).apply();
 
     }
-    public void cambiarCelular(EnvioId envioId, Celular celular, DestinatarioId destinatarioId){
+    public void cambiarCelularDestinatario(EnvioId envioId, Celular celular, DestinatarioId destinatarioId){
         Objects.requireNonNull(envioId);
         Objects.requireNonNull(celular);
         Objects.requireNonNull(destinatarioId);

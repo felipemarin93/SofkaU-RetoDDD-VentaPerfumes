@@ -1,9 +1,9 @@
 package org.example.venta.perfumeria.perfumeria.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import org.example.venta.perfumeria.envio.events.values.PerfumeriaId;
-import org.example.venta.perfumeria.envio.events.values.ProveedorId;
-import org.example.venta.perfumeria.envio.events.values.Telefono;
+import org.example.venta.perfumeria.perfumeria.values.PerfumeriaId;
+import org.example.venta.perfumeria.perfumeria.values.ProveedorId;
+import org.example.venta.perfumeria.perfumeria.values.Telefono;
 
 public class TelefonoProveedorActualizado extends DomainEvent {
     private final PerfumeriaId perfumeriaId;

@@ -1,8 +1,8 @@
 package org.example.venta.perfumeria.perfumeria.entities;
 
 import co.com.sofka.domain.generic.Entity;
-import org.example.venta.perfumeria.envio.events.values.AdministradorId;
-import org.example.venta.perfumeria.envio.events.values.Nombre;
+import org.example.venta.perfumeria.perfumeria.values.AdministradorId;
+import org.example.venta.perfumeria.perfumeria.values.Nombre;
 
 import java.util.Objects;
 

@@ -7,7 +7,7 @@ import org.example.venta.perfumeria.pedido.entities.Factura;
 import org.example.venta.perfumeria.pedido.entities.Producto;
 import org.example.venta.perfumeria.pedido.events.*;
 import org.example.venta.perfumeria.pedido.values.*;
-import org.example.venta.perfumeria.envio.events.values.PerfumeriaId;
+import org.example.venta.perfumeria.perfumeria.values.PerfumeriaId;
 
 import java.util.List;
 import java.util.Objects;

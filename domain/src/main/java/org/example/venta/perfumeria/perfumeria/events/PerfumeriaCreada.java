@@ -2,7 +2,7 @@ package org.example.venta.perfumeria.perfumeria.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import org.example.venta.perfumeria.perfumeria.entities.Administrador;
-import org.example.venta.perfumeria.envio.events.values.Direccion;
+import org.example.venta.perfumeria.perfumeria.values.Direccion;
 
 public class PerfumeriaCreada extends DomainEvent {
 

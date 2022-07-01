@@ -2,11 +2,11 @@ package org.example.venta.perfumeria.perfumeria;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
-import org.example.venta.perfumeria.envio.events.values.*;
 import org.example.venta.perfumeria.perfumeria.entities.Administrador;
 import org.example.venta.perfumeria.perfumeria.entities.Proveedor;
 import org.example.venta.perfumeria.perfumeria.entities.Vendedor;
 import org.example.venta.perfumeria.perfumeria.events.*;
+import org.example.venta.perfumeria.perfumeria.values.*;
 
 
 import java.util.List;

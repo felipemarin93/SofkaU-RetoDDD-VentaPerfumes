@@ -2,7 +2,7 @@ package org.example.venta.perfumeria.pedido.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import org.example.venta.perfumeria.pedido.entities.Cliente;
-import org.example.venta.perfumeria.envio.events.values.PerfumeriaId;
+import org.example.venta.perfumeria.perfumeria.values.PerfumeriaId;
 
 public class PedidoCreado extends DomainEvent {
     private final PerfumeriaId perfumeriaId;

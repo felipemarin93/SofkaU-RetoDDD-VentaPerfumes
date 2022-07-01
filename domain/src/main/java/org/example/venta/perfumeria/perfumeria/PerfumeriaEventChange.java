@@ -6,7 +6,7 @@ import org.example.venta.perfumeria.perfumeria.entities.Proveedor;
 import org.example.venta.perfumeria.perfumeria.entities.Vendedor;
 import org.example.venta.perfumeria.perfumeria.events.*;
 
-import java.util.Objects;
+
 
 public class PerfumeriaEventChange extends EventChange {
     public PerfumeriaEventChange(Perfumeria perfumeria) {

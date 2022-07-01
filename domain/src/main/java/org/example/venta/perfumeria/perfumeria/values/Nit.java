@@ -1,4 +1,4 @@
-package org.example.venta.perfumeria.envio.events.values;
+package org.example.venta.perfumeria.perfumeria.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 

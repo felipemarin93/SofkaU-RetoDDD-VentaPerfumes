@@ -1,10 +1,10 @@
 package org.example.venta.perfumeria.perfumeria.entities;
 
 import co.com.sofka.domain.generic.Entity;
-import org.example.venta.perfumeria.envio.events.values.Nit;
-import org.example.venta.perfumeria.envio.events.values.Nombre;
-import org.example.venta.perfumeria.envio.events.values.ProveedorId;
-import org.example.venta.perfumeria.envio.events.values.Telefono;
+import org.example.venta.perfumeria.perfumeria.values.Nit;
+import org.example.venta.perfumeria.perfumeria.values.Nombre;
+import org.example.venta.perfumeria.perfumeria.values.ProveedorId;
+import org.example.venta.perfumeria.perfumeria.values.Telefono;
 
 import java.util.Objects;
 
