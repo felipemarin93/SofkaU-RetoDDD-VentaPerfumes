@@ -9,7 +9,12 @@ public class Direccion implements ValueObject<String> {
     private final String direccion;
     public Direccion(String direccion) {
         this.direccion = Objects.requireNonNull(direccion);
+
+        if (this.direccion.isBlank()){
+        throw new IllegalArgumentException("La direccion no puede ser vacía");
+        }
     }
+
     @Override
     public String value() {
         return direccion;

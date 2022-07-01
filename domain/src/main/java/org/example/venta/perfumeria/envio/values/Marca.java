@@ -8,6 +8,10 @@ public class Marca implements ValueObject<String> {
     private final String marca;
     public Marca(String marca) {
         this.marca = Objects.requireNonNull(marca);
+
+        if (this.marca.length()<3){
+            throw new IllegalArgumentException("No has indicado una marca original");
+        }
     }
     @Override
     public String value() {

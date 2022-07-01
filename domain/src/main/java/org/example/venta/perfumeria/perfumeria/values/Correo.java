@@ -9,6 +9,17 @@ public class Correo implements ValueObject <String> {
     public Correo(String correo) {
 
         this.correo = Objects.requireNonNull(correo);
+
+        if (!this.correo.contains("@")){
+            throw new IllegalArgumentException("No es un correo valido, por favor ingresalo nuevamente");
+        }
+        if (!this.correo.contains(".")){
+            throw new IllegalArgumentException("No es un correo valido, por favor ingresalo nuevamente");
+        }
+        if (this.correo.length()<10){
+            throw new IllegalArgumentException("No es un correo valido, por favor ingresalo nuevamente");
+        }
+
     }
     @Override
     public String value() {

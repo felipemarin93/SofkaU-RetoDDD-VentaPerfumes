@@ -9,6 +9,11 @@ public class Cantidad implements ValueObject<Integer> {
     private final Integer cantidad;
     public Cantidad(Integer cantidad) {
         this.cantidad = Objects.requireNonNull(cantidad);
+
+        if (this.cantidad < 0){
+            throw new IllegalArgumentException("Las cantidades de los productos no puede ser negativas");
+        }
+
     }
     @Override
     public Integer value() {

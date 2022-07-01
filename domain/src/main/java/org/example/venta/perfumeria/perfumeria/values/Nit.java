@@ -9,6 +9,11 @@ public class Nit implements ValueObject <String> {
     public Nit(String nit) {
 
         this.nit = Objects.requireNonNull(nit);
+
+        if (this.nit.length()<5){
+            throw new IllegalArgumentException("No es un Nit valido, por favor ingrésalo nuevamente");
+        }
+
     }
     @Override
     public String value() {

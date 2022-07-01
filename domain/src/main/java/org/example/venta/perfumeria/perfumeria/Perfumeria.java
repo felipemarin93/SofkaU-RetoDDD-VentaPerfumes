@@ -52,7 +52,7 @@ public class Perfumeria extends AggregateEvent<PerfumeriaId> {
 
     }
 
-    public void cambiarNombreDomiciliario(PerfumeriaId perfumeriaId, Nombre nombre, AdministradorId administradorId){
+    public void cambiarNombreAdministrador(PerfumeriaId perfumeriaId, Nombre nombre, AdministradorId administradorId){
         Objects.requireNonNull(perfumeriaId);
         Objects.requireNonNull(nombre);
         Objects.requireNonNull(administradorId);

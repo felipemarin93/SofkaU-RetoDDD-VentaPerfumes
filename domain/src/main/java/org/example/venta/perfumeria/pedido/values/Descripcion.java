@@ -10,6 +10,11 @@ public class Descripcion implements ValueObject<String> {
     public Descripcion(String descripcion) {
 
         this.descripcion = Objects.requireNonNull(descripcion);
+
+        if (this.descripcion.length()<10){
+            throw new IllegalArgumentException("Se requiere una descriopcion mas detallada");
+        }
+
     }
     @Override
     public String value() {

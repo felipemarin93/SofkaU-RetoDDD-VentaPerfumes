@@ -9,6 +9,13 @@ public class Telefono implements ValueObject<String> {
     public Telefono(String telefono) {
 
         this.telefono = Objects.requireNonNull(telefono);
+
+        if (this.telefono.isBlank()){
+            throw new IllegalArgumentException("El campo telefono no puede estar vacío");
+        }
+        if (this.telefono.length()>10){
+            throw new IllegalArgumentException("Un telefono no tiene mas de 10 Digitos");
+        }
     }
     @Override
     public String value() {

@@ -11,6 +11,7 @@ public class Fecha implements ValueObject<Date> {
     private final Date fecha;
     public Fecha(Date fecha) {
         this.fecha = Objects.requireNonNull(fecha);
+
     }
     @Override
     public Date value() {

@@ -10,6 +10,12 @@ public class Precio implements ValueObject<Integer> {
     public Precio(Integer precio) {
 
         this.precio = Objects.requireNonNull(precio);
+
+        if (this.precio < 0){
+            throw new IllegalArgumentException("Los precios son valores positivos");
+        }
+
+
     }
     @Override
     public Integer value() {

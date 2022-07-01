@@ -10,6 +10,11 @@ public class Nombre implements ValueObject<String> {
     public Nombre(String nombre) {
 
         this.nombre = Objects.requireNonNull(nombre);
+
+        if (this.nombre.length()<4){
+            throw new IllegalArgumentException("Es un nombre demasiado Corto, pon tu apellido por favor");
+        }
+
     }
     @Override
     public String value() {

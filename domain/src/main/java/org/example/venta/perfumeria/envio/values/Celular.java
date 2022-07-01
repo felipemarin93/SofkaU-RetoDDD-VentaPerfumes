@@ -2,13 +2,20 @@ package org.example.venta.perfumeria.envio.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
+import java.security.PrivilegedActionException;
 import java.util.Objects;
 
 public class Celular implements ValueObject<String> {
     private final String celular;
     public Celular(String celular) {
-
         this.celular = Objects.requireNonNull(celular);
+
+        if (this.celular.isBlank()){
+            throw new IllegalArgumentException("El campo celular no puede estar vacío");
+        }
+        if (this.celular.length()>10){
+            throw new IllegalArgumentException("Un celular no tiene mas de 10 Digitos");
+        }
     }
     @Override
     public String value() {
