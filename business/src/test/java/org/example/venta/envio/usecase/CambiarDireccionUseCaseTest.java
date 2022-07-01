@@ -1,11 +1,15 @@
-package org.example.venta.envio.usecase.envio;
+package org.example.venta.envio.usecase;
+
 
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.repository.DomainEventRepository;
 import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.domain.generic.DomainEvent;
-import org.example.venta.envio.commands.CambiarNombreDomiciliario;
-import org.example.venta.envio.events.*;
+import org.example.venta.envio.commands.CambiarDireccion;
+import org.example.venta.envio.events.DestinatarioCreado;
+import org.example.venta.envio.events.DireccionCambiada;
+import org.example.venta.envio.events.EnvioCreado;
+import org.example.venta.envio.usecase.enviousecase.CambiarDireccionUseCase;
 import org.example.venta.envio.values.*;
 import org.example.venta.pedido.values.PedidoId;
 import org.junit.jupiter.api.Assertions;
@@ -20,23 +24,23 @@ import java.util.List;
 
 import static org.mockito.Mockito.when;
 
-
 @ExtendWith(MockitoExtension.class)
-class CambiarNombreDomiciliarioUseCaseTest {
+class CambiarDireccionUseCaseTest {
 
     @Mock
     DomainEventRepository repository;
 
     @InjectMocks
-    CambiarNombreDomiciliarioUseCase useCase;
+    CambiarDireccionUseCase useCase;
 
     @Test
-    public void CambiarNombreDomiciliario(){
+    public void CambiarDireccion(){
+
         EnvioId envioId = EnvioId.of("1");
-        Nombre nombre = new Nombre("NuevoDomiciliario");
+        Direccion direccionACambiar = new Direccion("Diagonal50C#46-98");
         DestinatarioId destinatarioId = DestinatarioId.of("1");
 
-        var command = new CambiarNombreDomiciliario(envioId, nombre, destinatarioId);
+        var command = new CambiarDireccion(envioId,destinatarioId, direccionACambiar);
 
         when(repository.getEventsBy(envioId.value())).thenReturn(history());
         useCase.addRepository(repository);
@@ -48,25 +52,29 @@ class CambiarNombreDomiciliarioUseCaseTest {
                 .getDomainEvents();
 
         //assert
-        var event = (NombreDomiciliarioCambiado)events.get(0);
-        Assertions.assertEquals("NuevoDomiciliario" , event.nombre().value());
-
+        var event = (DireccionCambiada)events.get(0);
+        Assertions.assertEquals("Diagonal50C#46-98" , event.direccion().value());
     }
-
     private List<DomainEvent> history(){
 
         PedidoId pedidoId = PedidoId.of("1");
         Fecha fecha = new Fecha(LocalDate.now());
 
+
         Nombre nombre = new Nombre("Daniel Felipe");
-        DomiciliarioId domiciliarioId = DomiciliarioId.of("1");
+        Direccion direccion = new Direccion("Calle29A");
+        Celular celular = new Celular("323232131");
+        DestinatarioId destinatarioId = DestinatarioId.of("1");
 
         return List.of(
                 new EnvioCreado(pedidoId, fecha),
-                new DomiciliarioAgregado(domiciliarioId, nombre)
+                new DestinatarioCreado(nombre, direccion,celular,destinatarioId)
+
         );
 
+
     }
+
 
 
 }

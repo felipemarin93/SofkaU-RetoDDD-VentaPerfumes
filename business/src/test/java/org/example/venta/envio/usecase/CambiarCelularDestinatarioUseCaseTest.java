@@ -1,16 +1,18 @@
-package org.example.venta.envio.usecase.envio;
+package org.example.venta.envio.usecase;
 
 
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.repository.DomainEventRepository;
 import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.domain.generic.DomainEvent;
-import org.example.venta.envio.commands.CambiarDireccion;
+import org.example.venta.envio.commands.CambiarCelularDestinatario;
+import org.example.venta.envio.events.CelularDestinatarioCambiado;
 import org.example.venta.envio.events.DestinatarioCreado;
-import org.example.venta.envio.events.DireccionCambiada;
 import org.example.venta.envio.events.EnvioCreado;
+import org.example.venta.envio.usecase.enviousecase.CambiarCelularDestinatarioUseCase;
 import org.example.venta.envio.values.*;
 import org.example.venta.pedido.values.PedidoId;
+import org.example.venta.envio.values.Direccion;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -24,22 +26,22 @@ import java.util.List;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-class CambiarDireccionUseCaseTest {
+class CambiarCelularDestinatarioUseCaseTest {
 
     @Mock
     DomainEventRepository repository;
 
     @InjectMocks
-    CambiarDireccionUseCase useCase;
+    CambiarCelularDestinatarioUseCase useCase;
 
     @Test
-    public void CambiarDireccion(){
-
+    public void CambiarCelularDestinatario(){
         EnvioId envioId = EnvioId.of("1");
-        Direccion direccionACambiar = new Direccion("Diagonal50C#46-98");
+        Celular celular = new Celular("32156161");
         DestinatarioId destinatarioId = DestinatarioId.of("1");
 
-        var command = new CambiarDireccion(envioId,destinatarioId, direccionACambiar);
+
+        var command = new CambiarCelularDestinatario(envioId,celular,destinatarioId);
 
         when(repository.getEventsBy(envioId.value())).thenReturn(history());
         useCase.addRepository(repository);
@@ -51,9 +53,11 @@ class CambiarDireccionUseCaseTest {
                 .getDomainEvents();
 
         //assert
-        var event = (DireccionCambiada)events.get(0);
-        Assertions.assertEquals("Diagonal50C#46-98" , event.direccion().value());
+        var event = (CelularDestinatarioCambiado)events.get(0);
+        Assertions.assertEquals("32156161" , event.celular().value());
+
     }
+
     private List<DomainEvent> history(){
 
         PedidoId pedidoId = PedidoId.of("1");
@@ -73,7 +77,5 @@ class CambiarDireccionUseCaseTest {
 
 
     }
-
-
 
 }

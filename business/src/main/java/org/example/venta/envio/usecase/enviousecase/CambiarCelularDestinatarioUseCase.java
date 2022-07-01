@@ -1,4 +1,4 @@
-package org.example.venta.envio.usecase.envio;
+package org.example.venta.envio.usecase.enviousecase;
 
 import co.com.sofka.business.generic.UseCase;
 import co.com.sofka.business.support.RequestCommand;

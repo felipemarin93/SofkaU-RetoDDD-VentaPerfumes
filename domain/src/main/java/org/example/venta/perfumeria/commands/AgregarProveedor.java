@@ -1,9 +1,10 @@
 package org.example.venta.perfumeria.commands;
 
 
+import co.com.sofka.domain.generic.Command;
 import org.example.venta.perfumeria.values.*;
 
-public class AgregarProveedor {
+public class AgregarProveedor extends Command {
 
     private final PerfumeriaId perfumeriaId;
     private final ProveedorId proveedorId;

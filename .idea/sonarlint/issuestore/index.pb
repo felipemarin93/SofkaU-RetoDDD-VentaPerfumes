@@ -53,12 +53,8 @@ Ndomain/src/main/java/org/example/venta/perfumeria/events/VendedorAgregado.java
 Mdomain/src/main/java/org/example/venta/perfumeria/entities/Administrador.java,6\f\6fa19cc47bae4ea126fbf9f992eb63188035625f
 y
 Idomain/src/main/java/org/example/venta/perfumeria/entities/Proveedor.java,0\7\07dadeb9d4c11f60f3e7db76b3db8f30a476cead
-‚
-Rdomain/src/main/java/org/example/venta/pedido/events/CantidadProductoCambiada.java,c\4\c4f71c51a90c2829019968605437f69f9048dd39
 y
 Idomain/src/main/java/org/example/venta/pedido/events/ClienteCambiado.java,8\8\885a36401e74c9cdb3bcd42d050807ca4d201198
-t
-Ddomain/src/main/java/org/example/venta/pedido/PedidoEventChange.java,a\d\ad0e3f13a9fa7515b6fa6afab93af377b8f85b51
 Š
 Zdomain/src/main/java/org/example/venta/perfumeria/events/TelefonoProveedorActualizado.java,a\7\a7e39a1ed502c0c0489433fea849760e891dc784
 z
@@ -99,8 +95,6 @@ z
 Jdomain/src/main/java/org/example/venta/envio/commands/AgregarVehiculo.java,a\9\a9ab2915f59e6f98cbb8180dcaa773db5bd8f5fe
 {
 Kdomain/src/main/java/org/example/venta/envio/commands/CambiarDireccion.java,f\0\f02d546579dd4a1f0030342344e164eca151ddb1
-ƒ
-Sdomain/src/main/java/org/example/venta/pedido/commands/CambiarCantidadProducto.java,a\3\a3fd64618e9f468adbba10d3929abba420e57ab0
 z
 Jdomain/src/main/java/org/example/venta/pedido/commands/AgregarFactura.java,d\d\dd836fd62961de3a5d51a4da93918673ce1a28c9
 z
@@ -119,8 +113,6 @@ p
 @domain/src/main/java/org/example/venta/envio/values/EnvioId.java,9\a\9ab32848d482b7341619af501ce203bb4ee0df6b
 {
 Kdomain/src/main/java/org/example/venta/envio/events/DestinatarioCreado.java,c\1\c1638fcdcf40cd9500914039c0e5b697be693d62
-i
-9domain/src/main/java/org/example/venta/pedido/Pedido.java,a\1\a1f718e9330b31deed57abe327cbd18703afcb54
 €
 Pdomain/src/main/java/org/example/venta/perfumeria/commands/AgregarProveedor.java,e\3\e379b2f7ae79de4fa58a12df8c9a36744458b121
 q

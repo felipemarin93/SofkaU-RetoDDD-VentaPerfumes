@@ -1,11 +1,12 @@
 package org.example.venta.pedido.commands;
 
+import co.com.sofka.domain.generic.Command;
 import org.example.venta.pedido.values.Detalle;
 import org.example.venta.pedido.values.FacturaId;
 import org.example.venta.pedido.values.PedidoId;
 import org.example.venta.pedido.values.Precio;
 
-public class AgregarFactura {
+public class AgregarFactura extends Command {
 
     private final PedidoId pedidoId;
     private final FacturaId facturaId;

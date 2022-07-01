@@ -1,10 +1,11 @@
 package org.example.venta.perfumeria.commands;
 
+import co.com.sofka.domain.generic.Command;
 import org.example.venta.perfumeria.values.AdministradorId;
 import org.example.venta.perfumeria.values.Nombre;
 import org.example.venta.perfumeria.values.PerfumeriaId;
 
-public class CambiarNombreAdministrador {
+public class CambiarNombreAdministrador extends Command {
 
 
     private final PerfumeriaId perfumeriaId;
