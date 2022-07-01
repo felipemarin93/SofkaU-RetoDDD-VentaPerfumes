@@ -18,9 +18,7 @@ public class EnvioEventChange extends EventChange {
 
         });
 
-        apply((DestinatarioCambiado event) -> {
-            envio.cambiarDestinatario(event.nombre(), event.direccion(), event.celular());
-        });
+
         apply((DomiciliarioAgregado event) -> {
             envio.domiciliario = new Domiciliario(event.domiciliarioId(), event.nombre());
         });

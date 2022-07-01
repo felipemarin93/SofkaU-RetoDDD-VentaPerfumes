@@ -39,13 +39,7 @@ public class Envio extends AggregateEvent<EnvioId> {
         return envio;
     }
 
-    public void cambiarDestinatario(Nombre nombre, Direccion direccion, Celular celular){
-        Objects.requireNonNull(nombre);
-        Objects.requireNonNull(direccion);
-        Objects.requireNonNull(celular);
-        appendChange(new DestinatarioCambiado(nombre,direccion,celular)).apply();
 
-    }
 
     public void cambiarDireccion(EnvioId envioId, DestinatarioId destinatarioId, Direccion direccionACambiar){
         Objects.requireNonNull(envioId);
