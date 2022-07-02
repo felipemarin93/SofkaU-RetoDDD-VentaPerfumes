@@ -32,11 +32,7 @@ Hdomain/src/main/java/org/example/venta/perfumeria/entities/Vendedor.java,2\8\2
 ~
 Ndomain/src/main/java/org/example/venta/perfumeria/events/VendedorAgregado.java,e\f\ef7fa24c6b272dde2eb096e03766b3687af47de9
 y
-Idomain/src/main/java/org/example/venta/perfumeria/entities/Proveedor.java,0\7\07dadeb9d4c11f60f3e7db76b3db8f30a476cead
-y
 Idomain/src/main/java/org/example/venta/pedido/events/ClienteCambiado.java,8\8\885a36401e74c9cdb3bcd42d050807ca4d201198
-ä
-Zdomain/src/main/java/org/example/venta/perfumeria/events/TelefonoProveedorActualizado.java,a\7\a7e39a1ed502c0c0489433fea849760e891dc784
 z
 Jdomain/src/main/java/org/example/venta/perfumeria/values/PerfumeriaId.java,1\e\1e02c014c121802b99009eb5cbbb1fcb5cb0b718
 m
@@ -59,8 +55,6 @@ t
 Ddomain/src/main/java/org/example/venta/perfumeria/values/Nombre.java,a\4\a46ae76b9e535b3b28bea1afae44521d1f624448
 q
 Adomain/src/main/java/org/example/venta/perfumeria/values/Nit.java,6\7\67ccc4dc1f858306e4f904bf379e97ad3970a35a
-v
-Fdomain/src/main/java/org/example/venta/perfumeria/values/Telefono.java,2\4\244f3bb00553fbfa7b24a4f301ae36759fa68107
 {
 Kdomain/src/main/java/org/example/venta/envio/commands/CambiarDireccion.java,f\0\f02d546579dd4a1f0030342344e164eca151ddb1
 ã
@@ -85,10 +79,6 @@ n
 >domain/src/main/java/org/example/venta/envio/values/Marca.java,7\e\7ea4410cf5340416839e5486477f90433971606a
 o
 ?domain/src/main/java/org/example/venta/envio/values/Nombre.java,a\0\a00b9f4689a617e0471156d804e54bb0cf720490
-ô
-ibusiness/src/main/java/org/example/venta/envio/usecase/enviousecase/CambiarNombreDomiciliarioUseCase.java,9\4\9433717a40c59fe6f388200e8d39867f3bab2f63
-ê
-`business/src/main/java/org/example/venta/envio/usecase/enviousecase/CambiarDireccionUseCase.java,4\6\46be5225380ef4d00aaddaa363ee0e3da020e240
 Ç
 Rdomain/src/main/java/org/example/venta/pedido/events/CantidadProductoCambiada.java,c\4\c4f71c51a90c2829019968605437f69f9048dd39
 è
