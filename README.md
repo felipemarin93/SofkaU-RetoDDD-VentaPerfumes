@@ -5,6 +5,14 @@ Se crean los 3 agregados solicitados para esta entrega , además de los debidos 
 Se inicia con el Análisis del Negocio, y se selecciona el subdominio core "comercial"
 ![image](https://user-images.githubusercontent.com/51167724/176986489-85556e10-a9aa-437a-8202-cf5b1585fe88.png)
 
+Luego se realiza el Modelado de Dominio y los eventos de Dominio
+que puedes observar en este Link
+
+![image](https://user-images.githubusercontent.com/51167724/176987139-f8b1172b-b2eb-41e5-9803-3b0ad3e8fd69.png)
+
+https://drive.google.com/file/d/1Nq_7Ajd6EJadLojfNepu3cJ0Njpp0Kke/view?usp=sharing
+
+
 ![image](https://user-images.githubusercontent.com/51167724/176987100-51eccfbb-7748-4ccf-bb0a-bc8fded7745b.png)
 
 ![image](https://user-images.githubusercontent.com/51167724/176987109-04a56b07-621a-4019-b8ca-8efe7ef62fec.png)
