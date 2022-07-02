@@ -21,7 +21,22 @@ Todos los test aprueban como lo muestra la siguiente imagen
 
 Por último se agregan algunas validaciones de negocio a los objetos de valor para restringir datos nulos o invalidos, segun el caso.
 
+Se adjunta imagen de los test, los que están subrayados son los disparados por evento
+
+![image](https://user-images.githubusercontent.com/51167724/176986681-587637d0-b22f-4764-90cd-d72d99c3343a.png)
+
+
 Todo esto se realiza bajo el cntrol de Version de GitHub.
+
+
+Aclaración: Se cumplen todos los criterios solicitados
+
+-3 agregado
+-3 entidadespor cada agregado.
+-Mas de 12 objetos de valor
+-12 comportamientos con sus respectivos eventos de dominio y/o comandos
+- 10 casos de uso disparados por comandos
+- 2 casos de uso disparados por eventos
 
 Atento a comentarios
 
