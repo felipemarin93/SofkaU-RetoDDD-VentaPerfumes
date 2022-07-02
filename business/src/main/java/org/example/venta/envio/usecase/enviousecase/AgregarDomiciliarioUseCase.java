@@ -7,8 +7,6 @@ import org.example.venta.envio.Envio;
 import org.example.venta.envio.commands.AgregarDomiciliario;
 
 public class AgregarDomiciliarioUseCase extends UseCase<RequestCommand<AgregarDomiciliario>, ResponseEvents> {
-
-
     @Override
     public void executeUseCase(RequestCommand<AgregarDomiciliario> agregarDomiciliarioRequestCommand) {
         var command = agregarDomiciliarioRequestCommand.getCommand();
