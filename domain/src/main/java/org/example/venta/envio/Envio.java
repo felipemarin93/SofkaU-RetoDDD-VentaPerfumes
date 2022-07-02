@@ -18,13 +18,17 @@ public class Envio extends AggregateEvent<EnvioId> {
     protected Vehiculo vehiculo;
     protected Fecha fecha;
     protected PedidoId pedidoId;
+    protected Nombre nombre;
+    protected Direccion direccion;
+    protected Celular celular;
     protected DestinatarioId destinatarioId;
 
-    public Envio(EnvioId entityId, Fecha fecha, PedidoId pedidoId, Nombre nombre, Direccion direccion, Celular celular, DestinatarioId destinatarioId) {
-        super(entityId);
-        this.destinatarioId = destinatarioId;
-        appendChange(new EnvioCreado(pedidoId,fecha)).apply();
-        appendChange(new DestinatarioCreado(nombre,direccion,celular,destinatarioId)).apply();
+
+    public Envio(EnvioId envioId, PedidoId pedidoId, Fecha fecha) {
+        super(envioId);
+
+        appendChange(new EnvioCreado(envioId,pedidoId,fecha)).apply();
+//        appendChange(new DestinatarioCreado(nombre,direccion,celular,destinatarioId)).apply();
         subscribe(new EnvioEventChange(this));
     }
 
@@ -69,10 +73,13 @@ public class Envio extends AggregateEvent<EnvioId> {
         appendChange(new CelularDestinatarioCambiado(envioId,celular,destinatarioId)).apply();
     }
 
-    public void agregarDestinatario(EnvioId envioId, Destinatario destinatario){
-        Objects.requireNonNull(envioId);
-        Objects.requireNonNull(destinatario);
-        appendChange(new DestinatarioAgregado(envioId,destinatario)).apply();
+    public void agregarDestinatario(DestinatarioId destinatarioId, Nombre nombre, Direccion direccion, Celular celular){
+
+        Objects.requireNonNull(destinatarioId);
+        Objects.requireNonNull(nombre);
+        Objects.requireNonNull(direccion);
+        Objects.requireNonNull(celular);
+        appendChange(new DestinatarioAgregado(destinatarioId,nombre,direccion,celular)).apply();
     }
 
     public void cambiarNombreDomiciliario(EnvioId envioId, Nombre nombre, DestinatarioId destinatarioId){

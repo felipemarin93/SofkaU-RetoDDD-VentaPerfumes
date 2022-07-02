@@ -26,7 +26,7 @@ public class EnvioEventChange extends EventChange {
             envio.vehiculo = new Vehiculo(event.vehiculoId(), event.tipo(), event.marca());
         });
         apply((DestinatarioAgregado event) ->{
-            envio.destinatario = event.destinatario();
+            envio.destinatario = new Destinatario(event.getDestinatarioId(),event.getNombre(),event.getDireccion(),event.getCelular());
         });
         apply((DestinatarioCreado event) -> {
             envio.destinatario = new Destinatario(event.destinatarioId(), event.nombre(), event.direccion(), event.celular());

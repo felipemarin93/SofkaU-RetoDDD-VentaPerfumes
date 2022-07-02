@@ -62,7 +62,7 @@ class CambiarCelularDestinatarioUseCaseTest {
 
         PedidoId pedidoId = PedidoId.of("1");
         Fecha fecha = new Fecha(LocalDate.now());
-
+        EnvioId envioId = EnvioId.of("1");
 
         Nombre nombre = new Nombre("Daniel Felipe");
         Direccion direccion = new Direccion("Calle29A");
@@ -70,7 +70,7 @@ class CambiarCelularDestinatarioUseCaseTest {
         DestinatarioId destinatarioId = DestinatarioId.of("1");
 
         return List.of(
-                new EnvioCreado(pedidoId, fecha),
+                new EnvioCreado(envioId,pedidoId, fecha),
                 new DestinatarioCreado(nombre, direccion,celular,destinatarioId)
 
         );

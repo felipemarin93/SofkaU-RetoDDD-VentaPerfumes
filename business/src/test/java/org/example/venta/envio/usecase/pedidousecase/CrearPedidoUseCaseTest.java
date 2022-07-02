@@ -1,10 +1,10 @@
 package org.example.venta.envio.usecase.pedidousecase;
 
-import co.com.sofka.business.generic.UseCase;
+
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.domain.generic.DomainEvent;
-import org.example.venta.pedido.Pedido;
+
 import org.example.venta.pedido.commands.CrearPedido;
 import org.example.venta.pedido.events.PedidoCreado;
 import org.example.venta.pedido.values.ClienteId;
@@ -17,7 +17,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+
 
 class CrearPedidoUseCaseTest {
 

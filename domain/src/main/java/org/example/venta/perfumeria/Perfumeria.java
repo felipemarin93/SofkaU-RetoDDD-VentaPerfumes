@@ -69,4 +69,8 @@ public class Perfumeria extends AggregateEvent<PerfumeriaId> {
 
 
 
+
+
+
+
 }

@@ -58,12 +58,12 @@ class CambiarNombreDomiciliarioUseCaseTest {
 
         PedidoId pedidoId = PedidoId.of("1");
         Fecha fecha = new Fecha(LocalDate.now());
-
+        EnvioId envioId = EnvioId.of("1");
         Nombre nombre = new Nombre("Daniel Felipe");
         DomiciliarioId domiciliarioId = DomiciliarioId.of("1");
 
         return List.of(
-                new EnvioCreado(pedidoId, fecha),
+                new EnvioCreado(envioId,pedidoId, fecha),
                 new DomiciliarioAgregado(domiciliarioId, nombre)
         );
 

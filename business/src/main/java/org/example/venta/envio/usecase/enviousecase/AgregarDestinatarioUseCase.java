@@ -12,7 +12,7 @@ public class AgregarDestinatarioUseCase extends UseCase<RequestCommand<AgregarDe
         var command = agregarDestinatarioRequestCommand.getCommand();
         var envio = Envio.from(command.getEnvioId(),repository().getEventsBy(command.getEnvioId().value()));
 
-        envio.agregarDestinatario(command.getEnvioId(),command.getDestinatario());
+        envio.agregarDestinatario(command.getDestinatarioId(),command.getNombre(),command.getDireccion(),command.getCelular());
 
         emit().onResponse(new ResponseEvents(envio.getUncommittedChanges()));
     }
