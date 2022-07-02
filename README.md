@@ -19,8 +19,6 @@ https://drive.google.com/file/d/1Nq_7Ajd6EJadLojfNepu3cJ0Njpp0Kke/view?usp=shari
 
 
 
-Luego se realiza el Modelado de Dominio y los eventos de Dominio
-que puedes observar en este Link
 
 https://drive.google.com/file/d/1Nq_7Ajd6EJadLojfNepu3cJ0Njpp0Kke/view?usp=sharing
 
